@@ -257,7 +257,7 @@ const value=dataArray[i]||0;
 const maxHeight=window.innerWidth<480?140:window.innerWidth<768?170:220;
 const height=Math.max(window.innerWidth<480?6:8,(value/255)*maxHeight);
 bars[i].style.height=height+'px';
-if(bassInt>135){
+if(bassInt>100){
 const hue=(bassInt*2)%360;
 bars[i].style.background=`linear-gradient(to top,hsl(${hue},100%,50%) 0%,hsl(${(hue+60)%360},100%,60%) 40%,#fff 100%)`;
 bars[i].style.boxShadow=`0 0 ${bassInt/6}px hsla(${hue},100%,50%,${Math.min(bassInt/160,0.95)})`;
@@ -266,28 +266,29 @@ bars[i].style.background='linear-gradient(to top,#00ffff 0%,#00ccff 40%,#fff 100
 bars[i].style.boxShadow='0 0 10px rgba(0,255,255,0.6)';
 }
 }
-if(bassInt>115){
+if(bassInt>95){
 const pulse=1+bassInt/280;
-logoImg.style.transform=`scale(${pulse}) rotate(${(bassInt-115)/20}deg)`;
+logoImg.style.transform=`scale(${pulse}) rotate(${(bassInt-95)/20}deg)`;
 logoImg.style.filter=`drop-shadow(0 0 ${bassInt/1.4}px rgba(0,255,255,${Math.min(bassInt/160,1)}))`;
 document.body.style.filter=`brightness(${1+bassInt/350}) saturate(${1+bassInt/600}) hue-rotate(${bassInt/8}deg)`;
 if(titleH1){
 const textPulse=1+bassInt/650;
-titleH1.style.transform=`scale(${textPulse}) rotate(${(bassInt-115)/100}deg)`;
+titleH1.style.transform=`scale(${textPulse}) rotate(${(bassInt-95)/100}deg)`;
 titleH1.style.textShadow=`0 0 ${bassInt/2.5}px rgba(0,255,255,${Math.min(bassInt/180,0.95)})`;
 }
-if(subtitle&&bassInt>140){
+if(subtitle&&bassInt>110){
 subtitle.style.transform=`scale(${1+bassInt/900}) translateY(${Math.sin(bassInt/30)*2}px)`;
 }
-if(tagline&&bassInt>140){
+if(tagline&&bassInt>110){
 tagline.style.transform=`scale(${1+bassInt/900}) translateY(${Math.cos(bassInt/30)*2}px)`;
 }
-if(bassInt>170){
+if(bassInt>130){
 clearTimeout(bassHitTimeout);
 document.body.classList.add('bass-hit');
+createRandomWaves(2,false);
 bassHitTimeout=setTimeout(()=>document.body.classList.remove('bass-hit'),60);
 }
-if(bassDrop>40&&bassInt>180){
+if(bassDrop>30&&bassInt>140){
 clearTimeout(megaDropTimeout);
 clearTimeout(glitchTimeout);
 clearTimeout(chromaticTimeout);
@@ -297,6 +298,7 @@ container.classList.add('shake');
 logoImg.classList.add('chromatic');
 document.body.classList.add('glitch');
 statCards.forEach(card=>card.classList.add('bass-pulse'));
+createRandomWaves(5,true);
 megaDropTimeout=setTimeout(()=>document.body.classList.remove('mega-drop'),150);
 glitchTimeout=setTimeout(()=>{
 document.body.classList.remove('glitch');
