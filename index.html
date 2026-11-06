@@ -18,8 +18,12 @@
 <link rel="canonical" href="https://ark-dev.org/">
 <link rel="alternate" hreflang="es" href="https://ark-dev.org/">
 <link rel="alternate" hreflang="x-default" href="https://ark-dev.org/">
-<link rel="icon" type="image/png" href="https://www.ark-dev.org/logos/logoarkdev.png">
-<link rel="apple-touch-icon" href="https://www.ark-dev.org/logos/logoarkdev.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-48x48.png" type="image/png" sizes="48x48">
+<link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96">
+<link rel="icon" href="/favicon-192x192.png" type="image/png" sizes="192x192">
+<link rel="shortcut icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" as="image" href="bg-blackhole.jpg">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ARK DEV">
@@ -42,7 +46,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-{"@type":["Organization","ProfessionalService"],"@id":"https://ark-dev.org/#org","name":"ARK DEV","alternateName":["ARK DEV ORG","ARK DEV System","ARK DEV Solutions","ARK Secure"],"url":"https://ark-dev.org/","logo":"https://www.ark-dev.org/logos/logoarkdev.png","image":"https://ark-dev.org/logos/newlogoarkdev_1200x630.jpg","description":"Consultora tecnológica privada con operaciones en Chile y Bolivia: desarrollo de software, inteligencia artificial, ciberseguridad e IoT.","foundingDate":"2024-04-14","founder":{"@type":"Person","name":"Joel Andrés"},"email":"info@ark-dev.org","areaServed":["BO","CL"],"address":[{"@type":"PostalAddress","streetAddress":"Avenida Providencia 2348","postalCode":"7510052","addressLocality":"Providencia","addressRegion":"Región Metropolitana","addressCountry":"CL"},{"@type":"PostalAddress","streetAddress":"Zona Satélite","addressLocality":"El Alto","addressRegion":"La Paz","addressCountry":"BO"}],"contactPoint":[{"@type":"ContactPoint","contactType":"sales","email":"sales@ark-dev.org","availableLanguage":"es"},{"@type":"ContactPoint","contactType":"customer support","email":"support@ark-dev.org","availableLanguage":"es"}],"sameAs":["https://www.linkedin.com/company/ark-dev-org/","https://github.com/ARK-DEV-ORG","https://www.youtube.com/@ark-dev-org","https://www.crunchbase.com/organization/ark-dev","https://www.f6s.com/ark-dev"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Servicios de ARK DEV","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Desarrollo de software"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Ciberseguridad empresarial"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Hardware e IoT"}}]}},
+{"@type":["Organization","ProfessionalService"],"@id":"https://ark-dev.org/#org","name":"ARK DEV","alternateName":["ARK DEV ORG","ARK DEV System","ARK DEV Solutions","ARK Secure"],"url":"https://ark-dev.org/","logo":"https://ark-dev.org/ark-dev-logo.png","image":"https://ark-dev.org/logos/newlogoarkdev_1200x630.jpg","description":"Consultora tecnológica privada con operaciones en Chile y Bolivia: desarrollo de software, inteligencia artificial, ciberseguridad e IoT.","foundingDate":"2024-04-14","founder":{"@type":"Person","name":"Joel Andrés"},"email":"info@ark-dev.org","areaServed":["BO","CL"],"address":[{"@type":"PostalAddress","streetAddress":"Avenida Providencia 2348","postalCode":"7510052","addressLocality":"Providencia","addressRegion":"Región Metropolitana","addressCountry":"CL"},{"@type":"PostalAddress","streetAddress":"Zona Satélite","addressLocality":"El Alto","addressRegion":"La Paz","addressCountry":"BO"}],"contactPoint":[{"@type":"ContactPoint","contactType":"sales","email":"sales@ark-dev.org","availableLanguage":"es"},{"@type":"ContactPoint","contactType":"customer support","email":"support@ark-dev.org","availableLanguage":"es"}],"sameAs":["https://www.linkedin.com/company/ark-dev-org/","https://github.com/ARK-DEV-ORG","https://www.youtube.com/@ark-dev-org","https://www.crunchbase.com/organization/ark-dev","https://www.f6s.com/ark-dev"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Servicios de ARK DEV","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Desarrollo de software"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Ciberseguridad empresarial"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Hardware e IoT"}}]}},
 {"@type":"WebSite","@id":"https://ark-dev.org/#website","url":"https://ark-dev.org/","name":"ARK DEV","alternateName":"ARK DEV ORG","inLanguage":"es","publisher":{"@id":"https://ark-dev.org/#org"}},
 {"@type":"WebPage","@id":"https://ark-dev.org/#webpage","url":"https://ark-dev.org/","name":"ARK DEV | ARK DEV ORG — Consultoría Tecnológica, IA y Ciberseguridad","isPartOf":{"@id":"https://ark-dev.org/#website"},"about":{"@id":"https://ark-dev.org/#org"},"inLanguage":"es"}
 ]}
@@ -128,7 +132,7 @@ footer nav ul{justify-content:center;flex-wrap:wrap;gap:1.2rem;margin:1rem 0}
 
 <header>
 <a class="brand" href="#inicio" aria-label="ARK DEV, inicio">
-<img src="https://www.ark-dev.org/logos/logoarkdev.png" alt="" width="34" height="34">
+<img src="/ark-dev-mark.svg" alt="" width="36" height="32">
 ARK DEV</a>
 <button class="menu" id="mb" aria-expanded="false" aria-controls="nv">Menú</button>
 <nav id="nv" aria-label="Principal">
@@ -145,7 +149,7 @@ ARK DEV</a>
 
 <main id="inicio">
 <section class="hero" aria-labelledby="t">
-<img class="hl" src="https://www.ark-dev.org/logos/logoarkdev.png" alt="Logo de ARK DEV" width="130" height="130" fetchpriority="high">
+<img class="hl" src="/ark-dev-mark.svg" alt="Logo de ARK DEV" width="130" height="114" fetchpriority="high">
 <h1 id="t">ARK DEV</h1>
 <p class="sub">Consultoría tecnológica privada · ARK DEV ORG</p>
 <p class="lead">Diseñamos, desplegamos y operamos software, inteligencia artificial y ciberseguridad para organizaciones públicas y privadas. Operaciones en Chile y Bolivia, con infraestructura VPS AMD EPYC en Estados Unidos.</p>
